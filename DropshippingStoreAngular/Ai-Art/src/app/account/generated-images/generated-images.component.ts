@@ -1,18 +1,19 @@
 import { Component, signal } from '@angular/core';
 import { AccountService } from '../../services/account.service';
-import { CommonModule } from '@angular/common';
+import { CommonModule, CurrencyPipe } from '@angular/common';
+import { Image } from '../../types/image.interface';
 
 @Component({
   selector: 'app-generated-images',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, CurrencyPipe],
   templateUrl: './generated-images.component.html',
   styleUrl: './generated-images.component.css'
 })
 export class GeneratedImagesComponent {
-  soldImages = signal<any>([]);
+  soldImages = signal<Image[]>([]);
   isLoading = signal<boolean>(true);
-
+  earns = signal<number>(0)
   constructor(private readonly accountService: AccountService){}
 
   ngOnInit(){
@@ -24,6 +25,11 @@ export class GeneratedImagesComponent {
         console.log('User info response:', data); 
         if (data && data.userInfo && data.userInfo.soldImages) {
           this.soldImages.set(data.userInfo.soldImages);
+          this.earns.update((v)=>{
+            let test = 0
+            let p = this.soldImages().map(i=> {return Math.round((i.price / 100) * 5)}).forEach(i=> test += i)
+            return test
+          })
         } else {
           console.error('soldImages not found in the response');
         }

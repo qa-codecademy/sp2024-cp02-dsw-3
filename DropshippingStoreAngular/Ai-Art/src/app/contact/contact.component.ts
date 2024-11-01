@@ -43,9 +43,9 @@ export class ContactComponent {
     private dialog: MatDialog
   ) {
     this.contactForm = this.fb.group({
-      name: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      phone: ['', Validators.required],
+      name: ['', [Validators.required, Validators.pattern(/^[a-zA-Z]{3,}(?: [a-zA-Z]+)?(?: [a-zA-Z]+)?$/)]],
+      email: ['', [Validators.required, Validators.pattern(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)]],
+      phone: ['', [Validators.required, Validators.pattern(/^[0-9]{9,13}$/)]],
       message: ['', Validators.required]
     })
   }
