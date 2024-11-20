@@ -44,16 +44,16 @@ Mentor of this project was Aneta Stankovska, mentor at QinShift Academy.
 ## Images from application
 
 <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 10px">
-<img src="images/1.png" width="500" />
-<img src="images/2.png" width="500" />
-<img src="images/3.png" width="500" />
-<img src="images/4.png" width="500" />
-<img src="images/5.png" width="500" />
-<img src="images/6.png" width="500" />
-<img src="images/7.png" width="500" />
-<img src="images/8.png" width="500" />
-<img src="images/9.png" width="500" />
-<img src="images/10.png" width="500" />
-<img src="images/11.png" width="500" />
-<img src="images/12.png" width="500" />
+<img src="public/readme/1.png" width="500" />
+<img src="public/readme/2.png" width="500" />
+<img src="public/readme/3.png" width="500" />
+<img src="public/readme/4.png" width="500" />
+<img src="public/readme/5.png" width="500" />
+<img src="public/readme/6.png" width="500" />
+<img src="public/readme/7.png" width="500" />
+<img src="public/readme/8.png" width="500" />
+<img src="public/readme/9.png" width="500" />
+<img src="public/readme/10.png" width="500" />
+<img src="public/readme/11.png" width="500" />
+<img src="public/readme/12.png" width="500" />
 </div>
